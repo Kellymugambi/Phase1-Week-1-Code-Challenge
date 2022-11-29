@@ -50,4 +50,28 @@ function speed(speed){
 
 
 // Net salary calculator
+ //payee tax calculator
+function payee (basicSalary){
+    if (basicSalary<24001){
+        return "payee tax:"+((basicSalary*10)/100);  
+       }    
+    if (basicSalary<32333) {
+            return 'payee tax:'+((basicSalary*25)/100)
+    } 
 
+     if (basicSalary>32333) {
+            return 'payee tax:'+((basicSalary*30)/100)
+    } 
+    
+}
+//console.log(payee(70000))
+
+
+//Nhif rates
+
+
+
+
+
+
+console.log(NhifDeduction(1000))
