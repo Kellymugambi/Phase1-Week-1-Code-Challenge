@@ -48,8 +48,6 @@ function speed(speed){
     }
 // console.log(speed(85))
 
-
-// Net salary calculator
  //payee tax calculator
 function payee (basicSalary){
     if (basicSalary<24001){
@@ -68,10 +66,43 @@ function payee (basicSalary){
 
 
 //Nhif rates
+function nhifDeduction(grossPay){
+    if (grossPay< 6000){
+        return 150
+    }  if(grossPay< 8000){
+        return 300
+    }  if(grossPay < 12000){
+        return 400
+    }  if(grossPay < 15000){
+        return 500
+    }  if(grossPay < 20000){
+        return 600
+    }  if(grossPay < 25000){
+        return 750
+    } if(grossPay  < 30000){
+        return 850
+    } if(grossPay < 35000){
+        return 900
+    }  if(grossPay < 40000){
+        return 950
+    } if(grossPay  < 45000){
+        return 1000
+    }  if(grossPay < 50000){
+        return 1100
+    }  if(grossPay < 60000){
+        return 1200
+    } if(grossPay  < 70000){
+        return 1300
+    } if(grossPay  < 80000){
+        return 1400
+    } if(grossPay  < 90000){
+        return 1500
+    } if(grossPay  <100000){
+        return 1600
+    } if(grossPay >= 100000){
+        return 1700 
+    }  
+}
+// console.log(nhifDeduction(950000))
 
-
-
-
-
-
-console.log(NhifDeduction(1000))
+//NSSF Deduction
