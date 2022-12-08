@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed detector</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="detector">
+        <h1>Speed Detector</h1>
+        <p>Input the speed</p>
+        <input type="number" id="speed" placeholder="e.g 60">
+        <button id="btn" onclick="evokeSpeed(event)">Check speed</button>
+        <p id="result">Result</p>
+    </div>
+    <div id="calc">
+        <h1>Net Salary Calculator</h1>
+        <p>Please enter your Basic Salary</p>
+        <input type="number" id="grossPay">
+        <button id="btn" onclick="displayDeductions(event)">Calculate</button>
+        <div class="cont">Net Salary: <span id="net-salary"></span></div>
+        <div class="cont">PAYE: <span id="paye"></span></div>
+        <div class="cont">NSSF: <span id="nssf"></span></div>
+        <div class="cont">NHIF: <span id="nhif"></span></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

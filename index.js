@@ -35,7 +35,7 @@ function grade(marks){
 // if speed is more than 70, for every 5km/s give driver one demerit point
 // if the points exceed 12, print license suspended
 
-function speed(speed){
+function speedDetector(speed){
     if (speed<70){
         return "OK"
     }
@@ -46,6 +46,13 @@ function speed(speed){
         return "Points:"+((speed-70)/5)
     }
     }
+    function evokeSpeed(event){
+        let speed = document.getElementById('speed').value
+        let speedKph = Boolean(speed) ? speed : 0;
+        document.getElementById('result').textContent = (speedDetector(speedKph))
+    }
+    
+
 // console.log(speed(85))
 
  //payee tax calculator
@@ -116,7 +123,18 @@ function nssf(grossPay){
 // Net salary
 function netPay(grossPay){
     let netSalary = grossPay - payee (grossPay) -nhifDeduction(grossPay) - nssf(grossPay)
-    return parseInt(netSalary)
+    return parseInt(netPay)
     
 }
 
+
+
+ 
+ function displayDeductions(event){
+     let grossSalary = document.getElementById('grossPay').value 
+     let salary = Boolean(grossSalary) ? grossSalary : 0;
+     document.getElementById('net-salary').textContent = (`Ksh ${netPay(salary)}`)
+     document.getElementById('paye').textContent = (`Ksh ${payee(salary)}`)
+     document.getElementById('nssf').textContent = (`Ksh ${nssf(salary)}`)
+     document.getElementById('nhif').textContent = (`Ksh ${nhifDeduction(salary)}`)
+ }
