@@ -49,16 +49,18 @@ function speed(speed){
 // console.log(speed(85))
 
  //payee tax calculator
-function payee (basicSalary){
-    if (basicSalary<24001){
-        return "payee tax:"+((basicSalary*10)/100);  
+
+
+function payee (grossPay){
+    if (grossPay<24001){
+        return "payee tax:"+((grossPay*10)/100);  
        }    
-    if (basicSalary<32333) {
-            return 'payee tax:'+((basicSalary*25)/100)
+    if (grossPay<32333) {
+            return 'payee tax:'+((grossPay*25)/100)
     } 
 
-     if (basicSalary>32333) {
-            return 'payee tax:'+((basicSalary*30)/100)
+     if (grossPay>32333) {
+            return 'payee tax:'+((grossPay*30)/100)
     } 
     
 }
@@ -106,3 +108,15 @@ function nhifDeduction(grossPay){
 // console.log(nhifDeduction(950000))
 
 //NSSF Deduction
+function nssf(grossPay){
+    return parseInt(grossPay *= 0.06)
+}
+//console.log(nssf(24000))
+
+// Net salary
+function netPay(grossPay){
+    let netSalary = grossPay - payee (grossPay) -nhifDeduction(grossPay) - nssf(grossPay)
+    return parseInt(netSalary)
+    
+}
+
