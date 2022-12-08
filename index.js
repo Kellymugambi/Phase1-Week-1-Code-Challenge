@@ -123,7 +123,7 @@ function nssf(grossPay){
 // Net salary
 function netPay(grossPay){
     let netSalary = grossPay - payee (grossPay) -nhifDeduction(grossPay) - nssf(grossPay)
-    return parseInt(netPay)
+    return parseInt(netSalary)
     
 }
 
