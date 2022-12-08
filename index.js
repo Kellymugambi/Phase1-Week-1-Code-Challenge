@@ -107,7 +107,7 @@ function nhifDeduction(grossPay){
 }
 // console.log(nhifDeduction(950000))
 
-//NSSF Deduction
+
 function nssf(grossPay){
     return parseInt(grossPay *= 0.06)
 }
